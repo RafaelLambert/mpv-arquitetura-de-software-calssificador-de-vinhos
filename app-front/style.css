@@ -1,0 +1,229 @@
+/* Global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    border:1px solid #2265c9;
+}
+
+.container, .add-wine-container{
+    width:100%;
+    max-width:85%;
+    padding: 2rem;
+
+    background-color: white;        
+
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+
+    text-align: center;
+}
+
+.main-page-title, .title{
+    margin-bottom: 1rem;
+    color: rgb(53, 53, 53);
+}
+
+/* Input components */
+input, select, button{
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 5px 5px 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input:focus, button:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+
+.search-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-container button{
+    width: calc(20% - 10px);
+    background-color: rgba(10, 140, 200, 0.95);
+    color: #fff;
+}
+
+
+
+#searchInput{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem; 
+}
+
+/*wine table components*/
+
+/*Remove o spinning dos input*/
+.wine-grade::-webkit-inner-spin-button, .wine-grade::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.wine-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.wine-table th, .wine-table td{
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: center;
+    margin: 2px;
+}
+
+.wine-table th{
+    background-color: rgba(10, 140, 200, 0.95);
+    color: rgba(255,255,255);
+}
+
+.wine-grade{
+    -moz-appearance: textfield; /* Firefox */
+    -webkit-appearance: none; /* Chrome, Safari */
+    appearance: none; /* Outros navegadores */
+    width: 60px;
+    text-align: center;
+    padding: 0.25rem;
+    margin: 0;
+}
+
+.save-btn, .delete-btn{
+    font-size: 0.8rem;
+    padding: 0.15rem;
+    width: 3rem;
+    color: rgb(255,250,245);
+}
+
+.save-btn{
+    background-color: rgb(15, 160, 15);
+}
+
+.delete-btn{
+    background-color: rgb(250, 50, 50);
+}
+
+.save-btn:hover{
+    background-color: rgb(15, 200, 15);
+}
+
+.delete-btn:hover{
+    background-color: rgb(255, 20, 20);
+}
+
+/* Add form components*/
+.add-wine-container {
+    margin-top: 2rem;
+    text-align: left;
+    max-width:100%;
+}
+
+.add-wine-form-container{
+    display: grid;
+    grid-template-areas: 
+    'name name name name type type fixedAcidity volatileAcidity citricAcid residualSugar'
+    'chlorides chlorides freeSulfurDioxide freeSulfurDioxide totalSulfurDioxide totalSulfurDioxide density ph sulphates alcohol'
+    'btn btn btn btn btn btn btn btn btn btn';
+    padding: 5px;
+    gap: 10px;
+}
+
+.add-wine-input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.div-name{
+    grid-area: name;
+}
+
+.div-wine-type-level{
+    grid-area: type;
+}
+
+.div-fixed-acidity{
+    grid-area: fixedAcidity;
+}
+
+.div-volatile-acidity{
+    grid-area: volatileAcidity;
+}
+
+.div-citric-acid{
+    grid-area: citricAcid;
+}
+
+.div-residual-sugar{
+    grid-area: residualSugar;
+}
+
+.div-chlorides{
+    grid-area: chlorides;
+}
+
+.div-free-sulfur-dioxide{
+    grid-area: freeSulfurDioxide;
+}
+
+.div-total-sulfur-dioxide{
+    grid-area: totalSulfurDioxide;
+}
+
+.div-density{
+    grid-area: density;
+}
+
+.div-ph{
+    grid-area: ph;
+}
+
+.div-sulphates{
+    grid-area: sulphates;
+}
+
+.div-alcohol{
+    grid-area: alcohol;
+}
+
+.div-btn{
+    grid-area: btn;
+    align-items: center;
+}
+
+.add-wine-container input {
+    width: calc(100% - 10px);
+}
+
+.add-wine-container select{
+    width: calc(100% - 10px);
+}
+
+.add-wine-container button {
+    width: calc(15% - 10px);
+    background-color: rgba(10, 140, 200, 0.95);
+    color: #fff;
+}
+
+.add-wine-container button:hover, .search-container button:hover {
+    background-color: rgb(10, 100, 140);;
+}
