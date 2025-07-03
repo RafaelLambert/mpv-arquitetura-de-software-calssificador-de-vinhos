@@ -45,7 +45,7 @@ def test_modelo_svm_std():
 
     # Testando as métricas do SVM
     # Modifique as métricas de acordo com seus requisitos
-    assert acuracia_svm >= 0.5
+    assert acuracia_svm >= 0.6
     # assert recall_svm >= 0.5
     # assert precisao_svm >= 0.5
     # assert f1_svm >= 0.5
@@ -60,7 +60,7 @@ def test_modelo_svm_norm():
 
     # Testando as métricas do SVM
     # Modifique as métricas de acordo com seus requisitos
-    assert acuracia_svm >= 0.5
+    assert acuracia_svm >= 0.6
     # assert recall_svm >= 0.5
     # assert precisao_svm >= 0.5
     # assert f1_svm >= 0.5

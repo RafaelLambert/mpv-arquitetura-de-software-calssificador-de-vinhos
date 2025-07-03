@@ -48,11 +48,14 @@ def predict(form: WineSchema):
 
     # Preparando os dados para o modelo
     X_input = preprocessador.preparar_form(form)
+    X_scaled = preprocessador.padronizar_dados(X_input)    
+
     # Carregando modelo
     model_path = "./machine_learning/pipeline/modelo_svm_std.pkl"
     modelo = pipeline.carrega_pipeline(model_path)
+
     # Realizando a predição
-    outcome = int(modelo.predict(X_input)[0])
+    outcome = int(modelo.predict(X_scaled)[0])
 
     if outcome == 0:
         outcome = "Ruim"
