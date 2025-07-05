@@ -117,7 +117,7 @@ const postWine = async (inputName, inputWineType, inputFixedAcidity, inputVolati
     if (response.ok) {
       alert("Wine added successfully!");
     } else if (response.status === 409) {
-      alert("Cpf already been added!");
+      alert("Wine already been added!");
     } else if (response.status === 400) {
       const errorData = await response.json();
       alert(`Error: ${errorData.message || 'Bad request'}`);
